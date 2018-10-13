@@ -80,10 +80,20 @@ ${project.name}
   Please note that the following parameter has been completely removed from the plugin configuration:
 
   * uniqueVersion
-  
+
+  The format of the following parameters has been changed:
+
+  * altDeploymentRepository
+  * altSnapshotDeploymentRepository
+  * altReleaseDeploymentRepository
+
+  The format has been changed from <<<id::layout::url>>> into the following: <<<id::url>>>. 
+  If you haven't changed your configuration this will lead to authentication issues 
+  with version 3.0.0-M1 and build failure with more recent versions.
+
   []
 
-  As of Maven 3, snapshot artifacts will always be deployed using a timestamped version.
+  As of Maven 3, snapshot artifacts will always be deployed using a time stamped version.
 
 * Usage
 
